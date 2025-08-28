@@ -32,18 +32,11 @@ function App() {
   if (error) return <div>Ошибка: {error}</div>;
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>Список курсов</h1>
-      <div style={{ display: 'grid', gap: '20px' }}>
+    <div className="container">
+      <h1 className="page-title">Список курсов</h1>
+      <div className="grid">
         {courses.map((course) => (
-          <div 
-            key={course.id} 
-            style={{ 
-              border: '1px solid #ddd', 
-              padding: '15px',
-              borderRadius: '8px'
-            }}
-          >
+          <div key={course.id} className="card">
             <h2>{course.title}</h2>
             <p>{course.description}</p>
           </div>
